@@ -6,7 +6,7 @@ import React, {
     useMemo,
     useState,
   } from "react";
-  import { motion, AnimatePresence, Transition } from "framer-motion";
+  import { motion, AnimatePresence, Transition, Variant } from "framer-motion";
   
   function cn(...classes: (string | undefined | null | boolean)[]): string {
     return classes.filter(Boolean).join(" ");
@@ -26,9 +26,9 @@ import React, {
     > {
     texts: string[];
     transition?: Transition;
-    initial?: any;
-    animate?: any;
-    exit?: any;
+    initial?: Variant;
+    animate?: Variant;
+    exit?: Variant;
     animatePresenceMode?: "sync" | "wait";
     animatePresenceInitial?: boolean;
     rotationInterval?: number;
@@ -229,9 +229,9 @@ import React, {
                     {wordObj.characters.map((char, charIndex) => (
                       <motion.span
                         key={charIndex}
-                        initial={initial}
-                        animate={animate}
-                        exit={exit}
+                        initial={initial as any}
+                        animate={animate as any}
+                        exit={exit as any}
                         transition={{
                           ...transition,
                           delay: getStaggerDelay(
@@ -262,4 +262,3 @@ import React, {
   
   RotatingText.displayName = "RotatingText";
   export default RotatingText;
-  
