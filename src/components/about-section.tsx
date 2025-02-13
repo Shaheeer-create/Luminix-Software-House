@@ -1,14 +1,16 @@
 "use client";
 
 import { motion, useScroll, useTransform } from "framer-motion";
-import { Play, Pause } from "lucide-react";
+import { Play } from "lucide-react";
 import { useRef, useState } from "react";
 import RotatingText from "./ui/RotatingText";
 import { Lobster } from "next/font/google";
+import Link from "next/link";
 
 const lobsterFont = Lobster({
   weight: "400",
   style: "normal",
+  subsets: ["latin"],
 });
 
 const AboutUs = "/video/aboutus.mp4";
@@ -71,18 +73,18 @@ export default function AboutSection() {
             </h2>
 
             <p className="text-gray-600 dark:text-gray-300 text-lg lg:text-xl leading-relaxed">
-              We <span className="bg-clip-text text-transparent bg-gradient-to-t from-[#F76680] to-[#57007B] font-semibold">add development capacity</span> to tech teams. Our value isn't
+              We <span className="bg-clip-text text-transparent bg-gradient-to-t from-[#F76680] to-[#57007B] font-semibold">add development capacity</span> to tech teams. Our value is not
               limited to building teams but is equally distributed across the project lifecycle. We are a custom
               software development company that guarantees the successful delivery of your project.
             </p>
           </div>
           <motion.div whileHover={{ x: 5 }} transition={{ duration: 0.2 }}>
-            <a href="#" className="inline-flex items-center text-[#57007B] hover:text-purple-700 dark:hover:text-purple-300 font-semibold text-lg">
+            <Link href="#" className="inline-flex items-center text-[#57007B] hover:text-purple-700 dark:hover:text-purple-300 font-semibold text-lg">
               See more Information
               <svg className="ml-2 w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M5 12h14M12 5l7 7-7 7" />
               </svg>
-            </a>
+            </Link>
           </motion.div>
         </motion.div>
 

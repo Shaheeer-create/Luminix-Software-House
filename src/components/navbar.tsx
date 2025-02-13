@@ -5,7 +5,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog"
-import { Menu, Info, Briefcase, FileText, BookOpen, HelpCircle, Users, Mail } from "lucide-react"
+import { Menu, Info, Briefcase, FileText, BookOpen, HelpCircle, Users } from "lucide-react"
 import { Orbitron } from 'next/font/google'
 import Logo from '../../public/logo.png'
 import { ModeToggle } from "./ModeToggle"
